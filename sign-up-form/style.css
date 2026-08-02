@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#image{
+    position: relative;
+}
+
+#img1{
+    height: 100vh;
+}
+#img2{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    height: 30vh;
+    width: 100%;
+    opacity: 0.5;
+}
+
+#container{
+    display: flex;
+    height:100vh;
+    background-color: rgba(15, 228, 228, 0.075);
+
+}
+
+#content{
+    margin:20px 0px 20px 10px;
+    padding: 50px 50px;
+
+
+    
+}
+
+#content {
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding:10px;
+    font-size:large;
+}
+
+#forms{
+    padding:5px;
+    font-size: 16px;
+    background-color: rgba(238, 130, 238, 0.075);
+
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between the label and the input */
+  margin-bottom: 16px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+ form{
+    display:grid;
+    grid-template-columns: repeat(2,3fr);
+    grid-template-rows: repeat(2,2fr);
+    gap:10px;
+} 
+
+
+/* .p { */
+     /* background-color: rgba(238, 130, 238, 0.397);  */
+     /* background-color: rgba(15, 228, 228, 0.397); */
+/* } */
+#para{
+        /* margin-top: 30px; */
+        padding: 10px;
+        margin-bottom: 10px;
+
+}
+
+button{ 
+    justify-items: center;
+    align-self: center;
+    width:300px;
+    font-size: 16px;
+    border-radius:8px;
+    padding:20px;
+    /* margin:10px; */
+    background-color: teal;
+    color:white;
+    border-color: #ccc;
+}
+
+#lasti{
+    justify-items: center;
+    align-self: center;
+     padding:20px;
+}
+
+
+input:user-invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: #35743b;
+}
+
+input:placeholder-shown {
+    border-color: #ccc;
+}

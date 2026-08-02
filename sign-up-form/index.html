@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = container>
+        <div id = "image">
+            <img src="1000_F_909100561_lYTvkuYJcSVM8avLiydlRDWRIprV6zLd.jpg" id = "img1">
+            <img src="lion-head-lion-logo-symbol-gaming-logo-elegant-element-for-brand-abstract-symbols-vector.jpg" id = "img2">
+        </div>
+        <div id = "content">
+            <div id = "para">
+          <p class = "p">this is something that you will need when you make a website so just see how it is and i havw to do this in an  hour or less i have to make 3 projects. this is the first one and the rest of the two are aslo only html and css based its already 01:05 in the night so...</p>
+
+          <h2>let's keep going add do the three yohoo!!</h2>
+        </div>
+        <div id = "forms">
+            <form action="">
+                <div class="input-group">
+                <label for="firstname">FirstName</label>
+                <input type="text" name="firstname" placeholder="e.g. yohoo" required>
+                </div>
+                <div class="input-group">
+                 <label for="Lastname">LastName</label>
+                <input type="text" name="Lastname" placeholder="e.g. rengoko" required>
+                </div>
+                <div class="input-group">        
+                 <label for="Email">Email</label>
+                <input type="email" name="Email" placeholder="e.g. rengoko@odin.com" required>
+                </div>
+                <div class="input-group"><label for="phone">Phone No.</label>
+                <input type="tel" name = "phone" placeholder="97124592257" required></div>
+                <div class="input-group">
+                <label for="Password">Password</label>
+                <input type="password" name="Password" required></div>
+                <div class="input-group"><label for="Cpassword">Confirm Password</label>
+                <input type="password" name="Cpassword" required></div>
+                <button type="submit">Create Account</button>
+
+                        <div>
+                        <p id = "lasti">Already login?
+                        <a href="/">Login</a></p>
+                        </div>
+            </form>
+    </div>
+    </div>
+
+    <script>
+        const form = document.querySelector("form");
+        const inputs = document.querySelectorAll("input[required]");
+
+        function showError(input) {
+            const isEmpty = input.value.trim() === "";
+            input.classList.toggle("invalid", isEmpty);
+
+            let error = input.parentElement.querySelector(".error-message");
+            if (isEmpty) {
+                if (!error) {
+                    error = document.createElement("div");
+                    error.className = "error-message";
+                    error.textContent = "This field is required";
+                    input.parentElement.appendChild(error);
+                }
+            } else if (error) {
+                error.remove();
+            }
+        }
+
+        inputs.forEach((input) => {
+            input.addEventListener("blur", () => showError(input));
+            input.addEventListener("input", () => {
+                if (input.value.trim() !== "") {
+                    input.classList.remove("invalid");
+                    const error = input.parentElement.querySelector(".error-message");
+                    if (error) error.remove();
+                }
+            });
+        });
+
+        form.addEventListener("submit", (event) => {
+            let valid = true;
+            inputs.forEach((input) => {
+                if (input.value.trim() === "") {
+                    showError(input);
+                    valid = false;
+                }
+            });
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
