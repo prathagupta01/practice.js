@@ -277,6 +277,6 @@ body {
 
     #projects {
         grid-template-columns: repeat(2, 1fr);
-        auto-rows: max-content;
+        max-width: max-content;
     }
 } 
