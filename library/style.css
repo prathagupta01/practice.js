@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background-image: url('https://wallpapers.com/images/featured/library-vyy56lqa9wji657j.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    position: relative;
+    left: 5vw;
+    width: 90vw;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px) saturate(102%);
+    -webkit-backdrop-filter: blur(20px) saturate(102%);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: black;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 2px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#gg {
+    width: 200px;
+    gap: 6px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#display {
+    color: rgb(7, 1, 1);
+    width: 90vw;
+    margin: 20px auto;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#addbookbutton {
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 600px;
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+#mydialog {
+    position: relative;
+    top: 20%;
+    left: 30%;
+    width: 30%;
+    text-align: center;
+    font-size: larger;
+    padding: 10px;
+}
+
+#form {
+    padding: 5px;
+}
+
+label {
+    display: inline-block;
+}
+
+input[type=text], input[type=number], select {
+    width: 80%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#submit {
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    background-color: blueviolet;
+}
+
+.madediv {
+    background-color: burlywood;
+    min-height: 210px;
+    width: calc(25% - 15px);
+    padding: 14px;
+    border-radius: 10px;
+}
+
+#cancelbutton {
+    background-color: coral;
+    text-align: center;
+    padding: 5px;
+    height: 45px;
+    width: 45%;
+    border-radius: 10px;
+    margin: 10px 4% 0 0;
+}
+
+#statuss {
+    background-color: coral;
+    text-align: center;
+    padding: 5px;
+    height: 45px;
+    width: 45%;
+    border-radius: 10px;
+    margin: 10px 0 0 0;
+}
